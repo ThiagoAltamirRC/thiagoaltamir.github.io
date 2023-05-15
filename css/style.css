@@ -270,14 +270,14 @@
     position: absolute;
     bottom: 100px;
     width: 15px;
-    animation: ama-animation 9.5s linear forwards;
+    animation: ama-animation 8s linear forwards;
 }
 
 .beats{
     position: absolute;
     bottom: 100px;
     width: 20px;
-    animation: beats-animation 19s linear forwards;
+    animation: beats-animation 16s linear forwards;
 }
 
 .becks{
@@ -285,63 +285,63 @@
     bottom: 100px;
     width: 15px;
     rotate: 15deg;
-    animation: becks-animation 28.5s linear forwards;
+    animation: becks-animation 24s linear forwards;
 }
 
 .brahma{
     position: absolute;
     bottom: 100px;
     width: 70px;
-    animation: brahma-animation 38s linear forwards;
+    animation: brahma-animation 32s linear forwards;
 }
 
 .dobem{
     position: absolute;
     bottom: 110px;
     width: 20px;
-    animation: dobem-animation 47.5s linear forwards;
+    animation: dobem-animation 40s linear forwards;
 }
 
 .fusion{
     position: absolute;
     bottom: 110px;
     width: 20px;
-    animation: fusion-animation 57s linear forwards;
+    animation: fusion-animation 48s linear forwards;
 }
 
 .gatorade{
     position: absolute;
     bottom: 110px;
     width: 25px;
-    animation: gatorade-animation 66.5s linear forwards;
+    animation: gatorade-animation 56s linear forwards;
 }
 
 .guarana{
     position: absolute;
     bottom: 110px;
     width: 60px;
-    animation: guarana-animation 76s linear forwards;
+    animation: guarana-animation 64s linear forwards;
 }
 
 .h2o{
     position: absolute;
     bottom: 110px;
     width: 20px;
-    animation: h2o-animation 85.5s linear forwards;
+    animation: h2o-animation 72s linear forwards;
 }
 
 .mikes{
     position: absolute;
     bottom: 110px;
     width: 25px;
-    animation: mikes-animation 95s linear forwards;
+    animation: mikes-animation 80s linear forwards;
 }
 
 .pepsi{
     position: absolute;
     bottom: 110px;
     width: 35px;
-    animation: pepsi-animation 104.5s linear forwards;
+    animation: pepsi-animation 88s linear forwards;
 }
 
 .stella{
@@ -349,7 +349,7 @@
     bottom: 110px;
     width: 15px;
     rotate: 15deg;
-    animation: stella-animation 114s linear forwards;
+    animation: stella-animation 96s linear forwards;
 }
 
 @keyframes obstaculo-animation{
