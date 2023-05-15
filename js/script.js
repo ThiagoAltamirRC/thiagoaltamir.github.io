@@ -160,7 +160,7 @@ function stopitem() {
 
 const loop = setInterval(() => {
 
-    //const obstaculoPosition = obstaculo.offsetLeft;
+    const obstaculoPosition = obstaculo.offsetLeft;
     const correndoPosition = +window.getComputedStyle(correndo).bottom.replace('px', '');
     const amaPosition = ama.offsetLeft;
     const beatsPosition = beats.offsetLeft;
