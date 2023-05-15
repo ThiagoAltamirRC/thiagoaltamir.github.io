@@ -199,6 +199,13 @@
     width: 60%;
 }
 
+.qrcode{
+    position: absolute;
+    bottom: 0px;
+    width: 150px;
+    right: 0; 
+}
+
 .caminhaoguarana{
     position: absolute;
     bottom: 60px;
