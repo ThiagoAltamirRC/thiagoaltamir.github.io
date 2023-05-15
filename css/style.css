@@ -1,0 +1,557 @@
+*   {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gameinfo{
+    width: 100vw;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px #08e8f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.dev{
+    width: 50%;
+    height: 10px;
+    position: absolute;
+    top: 30px;
+    left: 5px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-size: 10px;
+    color: #fff;
+}
+
+.win{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px #000000;
+    display: none;
+}
+ 
+.lost{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px #000000;
+    display: none;
+} 
+
+.gameover{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    -webkit-text-stroke: 1px #ffffff;
+    text-shadow: 1px #000000;
+    display: none;
+}
+
+.btnAtualizar {
+    position: absolute;
+    left: 42%;
+    background-color: #2c86cf; /* cor de fundo */
+    color: rgb(250, 250, 250); /* cor do texto */
+    border: none; /* borda */
+    padding: 10px 20px; /* preenchimento interno */
+    text-align: center; /* alinhamento do texto */
+    text-decoration: none; /* decoração do texto */
+    display: inline-block; /* exibição em bloco */
+    font-size: 20px; /* tamanho da fonte */
+    margin: 10px; /* margem */
+    cursor: pointer; /* cursor do mouse */
+    border-radius: 5px; /* raio da borda */
+  }
+
+.gameboard{
+    width: 100vw;
+    height: 100vh;
+    border-bottom: 10px solid gray;
+    justify-content: center;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.obstaculo{    
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: obstaculo-animation 3s infinite linear;
+}
+
+.correndo{
+    position: absolute;
+    bottom: 0;
+    width: 85px;
+    left: 0;
+}
+
+.pulo{
+    animation: pulo 500ms ease-out;
+}
+
+.vitoria{
+    position: absolute;
+    bottom: 0px;
+    width: 75px;
+    left: 0;
+}
+
+.fim{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    display: none;
+    animation: fim-animation 2s ease-in-out;
+    
+}
+
+@keyframes fim-animation{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        background: 0.5;
+    }
+
+    100%{
+        transform: 1;
+    }
+}
+
+.backpodio{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0; 
+}
+
+.podio{
+    position: absolute;
+    bottom: 170px;
+    width: 700px;
+    left: 25%; 
+}
+
+.campeao{
+    position: absolute;
+    bottom: 345px;
+    width: 120px;
+    left: 45%;
+}
+
+.fogos{
+    position: absolute;
+    bottom: 190px;
+    left: 20%;
+    width: 60%;
+}
+
+.caminhaoguarana{
+    position: absolute;
+    bottom: 60px;
+    width: 250px;
+    animation: caminhaoguarana-animation 45s linear forwards;
+}
+
+.caminhaobrahma{
+    position: absolute;
+    bottom: 60px;
+    width: 240px;
+    animation: caminhaobrahma-animation 70s linear forwards;
+}
+
+.caminhaoskol{
+    position: absolute;
+    bottom: 20px;
+    width: 240px;
+    animation: caminhaoskol-animation 120s linear forwards;
+}
+
+.caminhaoantarctica{
+    position: absolute;
+    bottom: 20px;
+    width: 240px;
+    animation: caminhaoantarctica-animation 60s linear forwards;
+}
+
+.back{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: back-animation 45s linear infinite ;
+}
+
+.back2{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: back2-animation 90s linear infinite ;
+}
+
+.back3{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: back3-animation 135s linear infinite ;
+}
+
+.back4{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    animation: back4-animation 180s linear infinite ;
+}
+
+.ama{
+    position: absolute;
+    bottom: 100px;
+    width: 15px;
+    animation: ama-animation 9.5s linear forwards;
+}
+
+.beats{
+    position: absolute;
+    bottom: 100px;
+    width: 20px;
+    animation: beats-animation 19s linear forwards;
+}
+
+.becks{
+    position: absolute;
+    bottom: 100px;
+    width: 15px;
+    rotate: 15deg;
+    animation: becks-animation 28.5s linear forwards;
+}
+
+.brahma{
+    position: absolute;
+    bottom: 100px;
+    width: 70px;
+    animation: brahma-animation 38s linear forwards;
+}
+
+.dobem{
+    position: absolute;
+    bottom: 110px;
+    width: 20px;
+    animation: dobem-animation 47.5s linear forwards;
+}
+
+.fusion{
+    position: absolute;
+    bottom: 110px;
+    width: 20px;
+    animation: fusion-animation 57s linear forwards;
+}
+
+.gatorade{
+    position: absolute;
+    bottom: 110px;
+    width: 25px;
+    animation: gatorade-animation 66.5s linear forwards;
+}
+
+.guarana{
+    position: absolute;
+    bottom: 110px;
+    width: 60px;
+    animation: guarana-animation 76s linear forwards;
+}
+
+.h2o{
+    position: absolute;
+    bottom: 110px;
+    width: 20px;
+    animation: h2o-animation 85.5s linear forwards;
+}
+
+.mikes{
+    position: absolute;
+    bottom: 110px;
+    width: 25px;
+    animation: mikes-animation 95s linear forwards;
+}
+
+.pepsi{
+    position: absolute;
+    bottom: 110px;
+    width: 35px;
+    animation: pepsi-animation 104.5s linear forwards;
+}
+
+.stella{
+    position: absolute;
+    bottom: 110px;
+    width: 15px;
+    rotate: 15deg;
+    animation: stella-animation 114s linear forwards;
+}
+
+@keyframes obstaculo-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes pulo{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 100px;
+    }
+
+    50%{
+        bottom: 100px;
+    }
+
+    60%{
+        bottom: 100px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+    
+@keyframes caminhaoguarana-animation{
+    from{
+        right: -250px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes caminhaobrahma-animation{
+    from{
+        right: -1000px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes caminhaoantarctica-animation{
+    from{
+        left: -250px;
+    }
+    to{
+        left: 100%;
+    }
+} 
+
+@keyframes caminhaoskol-animation{
+    from{
+        left: -1000px;
+    }
+    to{
+        left: 100%;
+    }
+} 
+
+@keyframes ama-animation{
+    from{
+        right: -500px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes beats-animation{
+    from{
+        right: -1000px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes becks-animation{
+    from{
+        right: -1500px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes brahma-animation{
+    from{
+        right: -2000px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes dobem-animation{
+    from{
+        right: -2500px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes fusion-animation{
+    from{
+        right: -3000px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes gatorade-animation{
+    from{
+        right: -3500px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes guarana-animation{
+    from{
+        right: -4000px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes h2o-animation{
+    from{
+        right: -4500px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes mikes-animation{
+    from{
+        right: -5000px;
+    }
+    to{
+        right: 100%;
+    }
+} 
+
+@keyframes pepsi-animation{
+    from{
+        right: -5500px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes stella-animation{
+    from{
+        right: -6000px;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes back-animation{
+    from{
+        right: 0vw;
+    }
+    to{
+        right: 100vw;
+    }
+}
+
+@keyframes back2-animation{
+    from{
+        right: -100vw;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes back3-animation{
+    from{
+        right: -200vw;
+    }
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes back4-animation{
+    from{
+        right: -300vw;
+    }
+    to{
+        right: 100%;
+    }
+}
