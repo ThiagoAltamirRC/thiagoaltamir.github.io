@@ -290,7 +290,7 @@ function animateElement(element) {
       element.style.display = 'none';
     }, 1000);}
 
-  if (score == 12 && tempo >= 115){
+  if (score == 1 && tempo >= 11){
     setInterval(() => {
     
     obstaculo.style.animation = 'none';
